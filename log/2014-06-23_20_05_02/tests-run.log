@@ -1,0 +1,37 @@
+[01;37m[00;00m[01;37mBegin spec/acceptance/simple_spec.rb
+[00;00m[01;31m#<LoadError: cannot load such file -- spec_helper_acceptance>
+[00;00m[01;31m/home/bubbu/CloudBees/3m-demo-2/spec/acceptance/simple_spec.rb:1
+[00;00m[01;31m/home/bubbu/CloudBees/3m-demo-2/spec/acceptance/simple_spec.rb:1
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_case.rb:122
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_case.rb:122
+[00;00m[01;31m/usr/lib/ruby/1.9.1/benchmark.rb:295
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_case.rb:119
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_suite.rb:43
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_suite.rb:39
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_suite.rb:39
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/test_suite.rb:75
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/cli.rb:134
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/lib/beaker/cli.rb:86
+[00;00m[01;31m/var/lib/gems/1.9.1/gems/beaker-1.12.2/bin/beaker:6
+[00;00m[01;31m/usr/local/bin/beaker:23
+[00;00m[01;31m/usr/local/bin/beaker:23
+[00;00m[00;33mWarning: spec/acceptance/simple_spec.rb errored in 0.02 seconds
+[00;00m[01;37m  Test Case spec/acceptance/simple_spec.rb reported: #<LoadError: cannot load such file -- spec_helper_acceptance>
+[00;00m[01;31mFailed: errored in TestSuite: report_and_raise_on_failure
+[00;00m[01;31m#<RuntimeError: Failed while running the tests suite>
+[00;00m[01;37mNo tests to run for suite 'post_suite'
+[00;00m[01;37mCleanup: cleaning up after failed run
+[00;00m[00;37mremoving temporory ssh-config files per-vagrant box
+[00;00m[01;37mDestroying vagrant boxes
+[00;00m[00;37mYou appear to be running Vagrant in a Bundler environment. Because
+[00;00m[00;37mVagrant should be run within installers (outside of Bundler), Vagrant
+[00;00m[00;37mwill assume that you're developing plugins and will change its behavior
+[00;00m[00;37min certain ways to better assist plugin development.
+[00;00m[00;37m
+[00;00m[00;37m[ubuntu-server-12042-x64] Forcing shutdown of VM...
+[00;00m[00;37m[ubuntu-server-12042-x64] Destroying VM and associated drives...
+[00;00m[01;31m
+Failed to execute tests!
+[00;00m[01;31mYou can reproduce this run with:
+[00;00m[01;31m/usr/local/bin/beaker --log-level debug --hosts spec/acceptance/nodesets/default.yml --tests spec/acceptance/simple_spec.rb
+[00;00m

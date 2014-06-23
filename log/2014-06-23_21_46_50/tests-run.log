@@ -1,0 +1,401 @@
+[01;37m[00;00m[01;37mBegin spec/spec_helper_acceptance.rb
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:15$  which lsb-release  
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 0.23 seconds
+[00;00m[00;37mExited: 1
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:15$  apt-get update  
+[00;00m[01;30mGet:1 http://security.ubuntu.com precise-security Release.gpg [198 B]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise Release.gpg
+[00;00m[01;30mGet:2 http://us.archive.ubuntu.com precise-updates Release.gpg [198 B]
+[00;00m[01;30mGet:3 http://us.archive.ubuntu.com precise-backports Release.gpg [198 B]
+[00;00m[01;30mGet:4 http://security.ubuntu.com precise-security Release [49.6 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise Release
+[00;00m[01;30mGet:5 http://us.archive.ubuntu.com precise-updates Release [49.6 kB]
+[00;00m[01;30mGet:6 http://us.archive.ubuntu.com precise-backports Release [49.6 kB]
+[00;00m[01;30mGet:7 http://security.ubuntu.com precise-security/main Sources [106 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe TranslationIndex
+[00;00m[01;30mGet:8 http://us.archive.ubuntu.com precise-updates/main Sources [461 kB]
+[00;00m[01;30mGet:9 http://security.ubuntu.com precise-security/restricted Sources [2,494 B]
+[00;00m[01;30mGet:10 http://security.ubuntu.com precise-security/universe Sources [30.7 kB]
+[00;00m[01;30mGet:11 http://security.ubuntu.com precise-security/multiverse Sources [1,795 B]
+[00;00m[01;30mGet:12 http://security.ubuntu.com precise-security/main amd64 Packages [401 kB]
+[00;00m[01;30mGet:13 http://us.archive.ubuntu.com precise-updates/restricted Sources [8,056 B]
+[00;00m[01;30mGet:14 http://us.archive.ubuntu.com precise-updates/universe Sources [108 kB]
+[00;00m[01;30mGet:15 http://us.archive.ubuntu.com precise-updates/multiverse Sources [8,890 B]
+[00;00m[01;30mGet:16 http://security.ubuntu.com precise-security/restricted amd64 Packages [4,627 B]
+[00;00m[01;30mGet:17 http://security.ubuntu.com precise-security/universe amd64 Packages [93.6 kB]
+[00;00m[01;30mGet:18 http://us.archive.ubuntu.com precise-updates/main amd64 Packages [791 kB]
+[00;00m[01;30mGet:19 http://security.ubuntu.com precise-security/multiverse amd64 Packages [2,434 B]
+[00;00m[01;30mGet:20 http://security.ubuntu.com precise-security/main i386 Packages [427 kB]
+[00;00m[01;30mGet:21 http://security.ubuntu.com precise-security/restricted i386 Packages [4,620 B]
+[00;00m[01;30mGet:22 http://security.ubuntu.com precise-security/universe i386 Packages [98.8 kB]
+[00;00m[01;30mGet:23 http://security.ubuntu.com precise-security/multiverse i386 Packages [2,647 B]
+[00;00m[01;30mGet:24 http://security.ubuntu.com precise-security/main TranslationIndex [74 B]
+[00;00m[01;30mGet:25 http://security.ubuntu.com precise-security/multiverse TranslationIndex [72 B]
+[00;00m[01;30mGet:26 http://security.ubuntu.com precise-security/restricted TranslationIndex [72 B]
+[00;00m[01;30mGet:27 http://security.ubuntu.com precise-security/universe TranslationIndex [73 B]
+[00;00m[01;30mGet:28 http://security.ubuntu.com precise-security/main Translation-en [184 kB]
+[00;00m[01;30mGet:29 http://security.ubuntu.com precise-security/multiverse Translation-en [1,299 B]
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/restricted Translation-en
+[00;00m[01;30mGet:30 http://security.ubuntu.com precise-security/universe Translation-en [57.5 kB]
+[00;00m[01;30mGet:31 http://us.archive.ubuntu.com precise-updates/restricted amd64 Packages [13.7 kB]
+[00;00m[01;30mGet:32 http://us.archive.ubuntu.com precise-updates/universe amd64 Packages [242 kB]
+[00;00m[01;30mGet:33 http://us.archive.ubuntu.com precise-updates/multiverse amd64 Packages [15.3 kB]
+[00;00m[01;30mGet:34 http://us.archive.ubuntu.com precise-updates/main i386 Packages [825 kB]
+[00;00m[01;30mGet:35 http://us.archive.ubuntu.com precise-updates/restricted i386 Packages [13.7 kB]
+[00;00m[01;30mGet:36 http://us.archive.ubuntu.com precise-updates/universe i386 Packages [248 kB]
+[00;00m[01;30mGet:37 http://us.archive.ubuntu.com precise-updates/multiverse i386 Packages [15.5 kB]
+[00;00m[01;30mGet:38 http://us.archive.ubuntu.com precise-updates/main TranslationIndex [3,564 B]
+[00;00m[01;30mGet:39 http://us.archive.ubuntu.com precise-updates/multiverse TranslationIndex [2,605 B]
+[00;00m[01;30mGet:40 http://us.archive.ubuntu.com precise-updates/restricted TranslationIndex [2,461 B]
+[00;00m[01;30mGet:41 http://us.archive.ubuntu.com precise-updates/universe TranslationIndex [2,850 B]
+[00;00m[01;30mGet:42 http://us.archive.ubuntu.com precise-backports/main Sources [5,145 B]
+[00;00m[01;30mGet:43 http://us.archive.ubuntu.com precise-backports/restricted Sources [14 B]
+[00;00m[01;30mGet:44 http://us.archive.ubuntu.com precise-backports/universe Sources [38.4 kB]
+[00;00m[01;30mGet:45 http://us.archive.ubuntu.com precise-backports/multiverse Sources [5,311 B]
+[00;00m[01;30mGet:46 http://us.archive.ubuntu.com precise-backports/main amd64 Packages [6,412 B]
+[00;00m[01;30mGet:47 http://us.archive.ubuntu.com precise-backports/restricted amd64 Packages [14 B]
+[00;00m[01;30mGet:48 http://us.archive.ubuntu.com precise-backports/universe amd64 Packages [41.4 kB]
+[00;00m[01;30mGet:49 http://us.archive.ubuntu.com precise-backports/multiverse amd64 Packages [5,206 B]
+[00;00m[01;30mGet:50 http://us.archive.ubuntu.com precise-backports/main i386 Packages [6,420 B]
+[00;00m[01;30mGet:51 http://us.archive.ubuntu.com precise-backports/restricted i386 Packages [14 B]
+[00;00m[01;30mGet:52 http://us.archive.ubuntu.com precise-backports/universe i386 Packages [41.2 kB]
+[00;00m[01;30mGet:53 http://us.archive.ubuntu.com precise-backports/multiverse i386 Packages [5,178 B]
+[00;00m[01;30mGet:54 http://us.archive.ubuntu.com precise-backports/main TranslationIndex [72 B]
+[00;00m[01;30mGet:55 http://us.archive.ubuntu.com precise-backports/multiverse TranslationIndex [72 B]
+[00;00m[01;30mGet:56 http://us.archive.ubuntu.com precise-backports/restricted TranslationIndex [70 B]
+[00;00m[01;30mGet:57 http://us.archive.ubuntu.com precise-backports/universe TranslationIndex [73 B]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe Translation-en
+[00;00m[01;30mGet:58 http://us.archive.ubuntu.com precise-updates/main Translation-en [353 kB]
+[00;00m[01;30mGet:59 http://us.archive.ubuntu.com precise-updates/multiverse Translation-en [9,010 B]
+[00;00m[01;30mGet:60 http://us.archive.ubuntu.com precise-updates/restricted Translation-en [3,027 B]
+[00;00m[01;30mGet:61 http://us.archive.ubuntu.com precise-updates/universe Translation-en [141 kB]
+[00;00m[01;30mGet:62 http://us.archive.ubuntu.com precise-backports/main Translation-en [5,882 B]
+[00;00m[01;30mGet:63 http://us.archive.ubuntu.com precise-backports/multiverse Translation-en [4,610 B]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted Translation-en
+[00;00m[01;30mGet:64 http://us.archive.ubuntu.com precise-backports/universe Translation-en [32.9 kB]
+[00;00m[01;30mFetched 5,032 kB in 9s (529 kB/s)
+Reading package lists...[00;00m[01;30m
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 15.34 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:30$  apt-get install  -y lsb-release  
+[00;00m[01;30mReading package lists...[00;00m[01;30m
+[00;00m[01;30mBuilding dependency tree...[00;00m[01;30m
+[00;00m[01;30mReading state information...[00;00m[01;30m
+[00;00m[01;30mSuggested packages:
+[00;00m[01;30m  lsb
+[00;00m[01;30mThe following packages will be upgraded:
+[00;00m[01;30m  lsb-release
+[00;00m[01;30m1 upgraded, 0 newly installed, 0 to remove and 122 not upgraded.
+Need to get 11.0 kB of archives.
+After this operation, 1,024 B of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main lsb-release all 4.0-0ubuntu20.3 [11.0 kB]
+[00;00m[01;30mdebconf: unable to initialize frontend: Dialog
+[00;00m[01;30mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+[00;00m[01;30mdebconf: falling back to frontend: Readline
+[00;00m[01;30mdebconf: unable to initialize frontend: Readline
+[00;00m[01;30mdebconf: (This frontend requires a controlling tty.)
+[00;00m[01;30mdebconf: falling back to frontend: Teletype
+[00;00m[01;30mdpkg-preconfigure: unable to re-open stdin: 
+[00;00m[01;30mFetched 11.0 kB in 0s (49.6 kB/s)
+[00;00m[01;30m(Reading database ... [00;00m[01;30m53994 files and directories currently installed.)
+[00;00m[01;30mPreparing to replace lsb-release 4.0-0ubuntu20.2 (using .../lsb-release_4.0-0ubuntu20.3_all.deb) ...
+[00;00m[01;30mUnpacking replacement lsb-release ...
+[00;00m[01;30mProcessing triggers for man-db ...
+[00;00m[01;30mdebconf: unable to initialize frontend: Dialog
+[00;00m[01;30mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+[00;00m[01;30mdebconf: falling back to frontend: Readline
+[00;00m[01;30mdebconf: unable to initialize frontend: Readline
+[00;00m[01;30mdebconf: (This frontend requires a controlling tty.)
+[00;00m[01;30mdebconf: falling back to frontend: Teletype
+[00;00m[01;30mSetting up lsb-release (4.0-0ubuntu20.3) ...
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 6.88 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:37$  which curl  
+[00;00m[01;30m/usr/bin/curl
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 0.04 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:37$  curl -O http://apt.puppetlabs.com/puppetlabs-release-$(lsb_release -c -s).deb  
+[00;00m[01;30m [00;00m[01;30m [00;00m[01;30m% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0[00;00m[01;30m[00;00m[01;30m1[00;00m[01;30m0[00;00m[01;30m0[00;00m[01;30m  3430  100  3430    0     0  10520      0 --:--:-- --:--:-- --:--:-- 23493
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 1.34 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:38$  dpkg -i puppetlabs-release-$(lsb_release -c -s).deb  
+[00;00m[01;30mSelecting previously unselected package puppetlabs-release.
+[00;00m[01;30m(Reading database ... [00;00m[01;30m53994 files and directories currently installed.)
+[00;00m[01;30mUnpacking puppetlabs-release (from puppetlabs-release-precise.deb) ...
+[00;00m[01;30mSetting up puppetlabs-release (1.0-7) ...
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 0.39 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:39$  apt-get update  
+[00;00m[01;30mGet:1 http://security.ubuntu.com precise-security Release.gpg [198 B]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise Release.gpg
+[00;00m[01;30mGet:2 http://us.archive.ubuntu.com precise-updates Release.gpg [198 B]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports Release.gpg
+[00;00m[01;30mGet:3 http://apt.puppetlabs.com precise Release.gpg [876 B]
+[00;00m[01;30mGet:4 http://security.ubuntu.com precise-security Release [49.6 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise Release
+[00;00m[01;30mGet:5 http://us.archive.ubuntu.com precise-updates Release [49.6 kB]
+[00;00m[01;30mGet:6 http://apt.puppetlabs.com precise Release [22.4 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports Release
+[00;00m[01;30mGet:7 http://security.ubuntu.com precise-security/main Sources [106 kB]
+[00;00m[01;30mGet:8 http://apt.puppetlabs.com precise/main Sources [68.2 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe TranslationIndex
+[00;00m[01;30mGet:9 http://apt.puppetlabs.com precise/dependencies Sources [8,552 B]
+[00;00m[01;30mGet:10 http://us.archive.ubuntu.com precise-updates/main Sources [461 kB]
+[00;00m[01;30mGet:11 http://apt.puppetlabs.com precise/main amd64 Packages [75.1 kB]
+[00;00m[01;30mGet:12 http://apt.puppetlabs.com precise/dependencies amd64 Packages [6,185 B]
+[00;00m[01;30mGet:13 http://apt.puppetlabs.com precise/main i386 Packages [75.0 kB]
+[00;00m[01;30mGet:14 http://apt.puppetlabs.com precise/dependencies i386 Packages [6,183 B]
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/dependencies TranslationIndex
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/main TranslationIndex
+[00;00m[01;30mGet:15 http://security.ubuntu.com precise-security/restricted Sources [2,494 B]
+[00;00m[01;30mGet:16 http://security.ubuntu.com precise-security/universe Sources [30.7 kB]
+[00;00m[01;30mGet:17 http://security.ubuntu.com precise-security/multiverse Sources [1,795 B]
+[00;00m[01;30mGet:18 http://security.ubuntu.com precise-security/main amd64 Packages [401 kB]
+[00;00m[01;30mGet:19 http://us.archive.ubuntu.com precise-updates/restricted Sources [8,056 B]
+[00;00m[01;30mGet:20 http://us.archive.ubuntu.com precise-updates/universe Sources [108 kB]
+[00;00m[01;30mGet:21 http://security.ubuntu.com precise-security/restricted amd64 Packages [4,627 B]
+[00;00m[01;30mGet:22 http://security.ubuntu.com precise-security/universe amd64 Packages [93.6 kB]
+[00;00m[01;30mGet:23 http://us.archive.ubuntu.com precise-updates/multiverse Sources [8,890 B]
+[00;00m[01;30mGet:24 http://us.archive.ubuntu.com precise-updates/main amd64 Packages [791 kB]
+[00;00m[01;30mGet:25 http://security.ubuntu.com precise-security/multiverse amd64 Packages [2,434 B]
+[00;00m[01;30mGet:26 http://security.ubuntu.com precise-security/main i386 Packages [427 kB]
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/dependencies Translation-en_US
+[00;00m[01;30mGet:27 http://security.ubuntu.com precise-security/restricted i386 Packages [4,620 B]
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/dependencies Translation-en
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/main Translation-en_US
+[00;00m[01;30mGet:28 http://security.ubuntu.com precise-security/universe i386 Packages [98.8 kB]
+[00;00m[01;30mGet:29 http://us.archive.ubuntu.com precise-updates/restricted amd64 Packages [13.7 kB]
+[00;00m[01;30mGet:30 http://us.archive.ubuntu.com precise-updates/universe amd64 Packages [242 kB]
+[00;00m[01;30mIgn http://apt.puppetlabs.com precise/main Translation-en
+[00;00m[01;30mGet:31 http://security.ubuntu.com precise-security/multiverse i386 Packages [2,647 B]
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/main TranslationIndex
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/multiverse TranslationIndex
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/restricted TranslationIndex
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/universe TranslationIndex
+[00;00m[01;30mGet:32 http://us.archive.ubuntu.com precise-updates/multiverse amd64 Packages [15.3 kB]
+[00;00m[01;30mGet:33 http://us.archive.ubuntu.com precise-updates/main i386 Packages [825 kB]
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/main Translation-en
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/multiverse Translation-en
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/restricted Translation-en
+[00;00m[01;30mHit http://security.ubuntu.com precise-security/universe Translation-en
+[00;00m[01;30mGet:34 http://us.archive.ubuntu.com precise-updates/restricted i386 Packages [13.7 kB]
+[00;00m[01;30mGet:35 http://us.archive.ubuntu.com precise-updates/universe i386 Packages [248 kB]
+[00;00m[01;30mGet:36 http://us.archive.ubuntu.com precise-updates/multiverse i386 Packages [15.5 kB]
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/main TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/multiverse TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/restricted TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/universe TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/main Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/universe Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/multiverse Sources
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/main amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/universe amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/multiverse amd64 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/main i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/universe i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/multiverse i386 Packages
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/main TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/multiverse TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/universe TranslationIndex
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/main Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/multiverse Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/restricted Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise/universe Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/main Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/multiverse Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/restricted Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-updates/universe Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/main Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/multiverse Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/restricted Translation-en
+[00;00m[01;30mHit http://us.archive.ubuntu.com precise-backports/universe Translation-en
+[00;00m[01;30mFetched 4,287 kB in 4s (942 kB/s)
+Reading package lists...[00;00m[01;30m
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 8.54 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:47$  apt-get install -y puppet  
+[00;00m[01;30mReading package lists...[00;00m[01;30m
+[00;00m[01;30mBuilding dependency tree...[00;00m[01;30m
+[00;00m[01;30mReading state information...[00;00m[01;30m
+[00;00m[01;30mThe following extra packages will be installed:
+[00;00m[01;30m  augeas-lenses debconf-utils facter hiera libaugeas-ruby libaugeas-ruby1.8
+[00;00m[01;30m  libaugeas0 libjson-ruby libruby libruby1.8 libshadow-ruby1.8 puppet-common
+[00;00m[01;30m  ruby ruby-json ruby-rgen ruby1.8 virt-what
+[00;00m[01;30mSuggested packages:
+[00;00m[01;30m  augeas-doc augeas-tools puppet-el vim-puppet ruby-selinux libselinux-ruby1.8
+[00;00m[01;30m  librrd-ruby1.9.1 librrd-ruby1.8 ri ruby-dev ruby1.8-examples ri1.8
+[00;00m[01;30mRecommended packages:
+[00;00m[01;30m  rdoc
+[00;00m[01;30mThe following NEW packages will be installed:
+[00;00m[01;30m  augeas-lenses debconf-utils facter hiera libaugeas-ruby libaugeas-ruby1.8
+[00;00m[01;30m  libaugeas0 libjson-ruby libruby libruby1.8 libshadow-ruby1.8 puppet
+[00;00m[01;30m  puppet-common ruby ruby-json ruby-rgen ruby1.8 virt-what
+[00;00m[01;30m0 upgraded, 18 newly installed, 0 to remove and 122 not upgraded.
+Need to get 3,847 kB of archives.
+After this operation, 15.0 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu/ precise/main augeas-lenses all 0.10.0-0ubuntu4 [175 kB]
+[00;00m[01;30mGet:2 http://apt.puppetlabs.com/ precise/main facter amd64 2.0.2-1puppetlabs1 [73.8 kB]
+[00;00m[01;30mGet:3 http://apt.puppetlabs.com/ precise/main hiera all 1.3.4-1puppetlabs1 [12.9 kB]
+[00;00m[01;30mGet:4 http://apt.puppetlabs.com/ precise/dependencies ruby-rgen all 0.6.5-1puppetlabs1 [82.2 kB]
+[00;00m[01;30mGet:5 http://apt.puppetlabs.com/ precise/main puppet-common all 3.6.2-1puppetlabs1 [1,317 kB]
+[00;00m[01;30mGet:6 http://us.archive.ubuntu.com/ubuntu/ precise/main debconf-utils all 1.5.42ubuntu1 [54.9 kB]
+[00;00m[01;30mGet:7 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libruby1.8 amd64 1.8.7.352-2ubuntu1.4 [1,797 kB]
+[00;00m[01;30mGet:8 http://apt.puppetlabs.com/ precise/main puppet all 3.6.2-1puppetlabs1 [9,626 B]
+[00;00m[01;30mGet:9 http://us.archive.ubuntu.com/ubuntu/ precise-updates/main ruby1.8 amd64 1.8.7.352-2ubuntu1.4 [33.8 kB]
+[00;00m[01;30mGet:10 http://us.archive.ubuntu.com/ubuntu/ precise/main ruby all 4.8 [5,054 B]
+[00;00m[01;30mGet:11 http://us.archive.ubuntu.com/ubuntu/ precise/universe virt-what amd64 1.11-1 [12.9 kB]
+[00;00m[01;30mGet:12 http://us.archive.ubuntu.com/ubuntu/ precise/main libaugeas0 amd64 0.10.0-0ubuntu4 [171 kB]
+[00;00m[01;30mGet:13 http://us.archive.ubuntu.com/ubuntu/ precise/main libaugeas-ruby1.8 amd64 0.3.0-1.1ubuntu4 [9,642 B]
+[00;00m[01;30mGet:14 http://us.archive.ubuntu.com/ubuntu/ precise/universe libaugeas-ruby all 0.3.0-1.1ubuntu4 [3,354 B]
+[00;00m[01;30mGet:15 http://us.archive.ubuntu.com/ubuntu/ precise/universe ruby-json amd64 1.6.3-1 [73.3 kB]
+[00;00m[01;30mGet:16 http://us.archive.ubuntu.com/ubuntu/ precise/universe libjson-ruby all 1.6.3-1 [1,588 B]
+[00;00m[01;30mGet:17 http://us.archive.ubuntu.com/ubuntu/ precise/main libruby all 4.8 [4,766 B]
+[00;00m[01;30mGet:18 http://us.archive.ubuntu.com/ubuntu/ precise/main libshadow-ruby1.8 amd64 1.4.1-8build1 [9,416 B]
+[00;00m[01;30mdebconf: unable to initialize frontend: Dialog
+[00;00m[01;30mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+[00;00m[01;30mdebconf: falling back to frontend: Readline
+[00;00m[01;30mdebconf: unable to initialize frontend: Readline
+[00;00m[01;30mdebconf: (This frontend requires a controlling tty.)
+[00;00m[01;30mdebconf: falling back to frontend: Teletype
+[00;00m[01;30mdpkg-preconfigure: unable to re-open stdin: 
+[00;00m[01;30mFetched 3,847 kB in 3s (1,127 kB/s)
+[00;00m[01;30mSelecting previously unselected package augeas-lenses.
+[00;00m[01;30m(Reading database ... [00;00m[01;30m54000 files and directories currently installed.)
+[00;00m[01;30mUnpacking augeas-lenses (from .../augeas-lenses_0.10.0-0ubuntu4_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package debconf-utils.
+[00;00m[01;30mUnpacking debconf-utils (from .../debconf-utils_1.5.42ubuntu1_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package libruby1.8.
+[00;00m[01;30mUnpacking libruby1.8 (from .../libruby1.8_1.8.7.352-2ubuntu1.4_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package ruby1.8.
+[00;00m[01;30mUnpacking ruby1.8 (from .../ruby1.8_1.8.7.352-2ubuntu1.4_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package ruby.
+[00;00m[01;30mUnpacking ruby (from .../apt/archives/ruby_4.8_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package virt-what.
+[00;00m[01;30mUnpacking virt-what (from .../virt-what_1.11-1_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package facter.
+[00;00m[01;30mUnpacking facter (from .../facter_2.0.2-1puppetlabs1_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package libaugeas0.
+[00;00m[01;30mUnpacking libaugeas0 (from .../libaugeas0_0.10.0-0ubuntu4_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package libaugeas-ruby1.8.
+[00;00m[01;30mUnpacking libaugeas-ruby1.8 (from .../libaugeas-ruby1.8_0.3.0-1.1ubuntu4_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package libaugeas-ruby.
+[00;00m[01;30mUnpacking libaugeas-ruby (from .../libaugeas-ruby_0.3.0-1.1ubuntu4_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package ruby-json.
+[00;00m[01;30mUnpacking ruby-json (from .../ruby-json_1.6.3-1_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package libjson-ruby.
+[00;00m[01;30mUnpacking libjson-ruby (from .../libjson-ruby_1.6.3-1_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package libruby.
+[00;00m[01;30mUnpacking libruby (from .../archives/libruby_4.8_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package libshadow-ruby1.8.
+[00;00m[01;30mUnpacking libshadow-ruby1.8 (from .../libshadow-ruby1.8_1.4.1-8build1_amd64.deb) ...
+[00;00m[01;30mSelecting previously unselected package hiera.
+[00;00m[01;30mUnpacking hiera (from .../hiera_1.3.4-1puppetlabs1_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package ruby-rgen.
+[00;00m[01;30mUnpacking ruby-rgen (from .../ruby-rgen_0.6.5-1puppetlabs1_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package puppet-common.
+[00;00m[01;30mUnpacking puppet-common (from .../puppet-common_3.6.2-1puppetlabs1_all.deb) ...
+[00;00m[01;30mSelecting previously unselected package puppet.
+[00;00m[01;30mUnpacking puppet (from .../puppet_3.6.2-1puppetlabs1_all.deb) ...
+[00;00m[01;30mProcessing triggers for man-db ...
+[00;00m[01;30mdebconf: unable to initialize frontend: Dialog
+[00;00m[01;30mdebconf: (TERM is not set, so the dialog frontend is not usable.)
+[00;00m[01;30mdebconf: falling back to frontend: Readline
+[00;00m[01;30mdebconf: unable to initialize frontend: Readline
+[00;00m[01;30mdebconf: (This frontend requires a controlling tty.)
+[00;00m[01;30mdebconf: falling back to frontend: Teletype
+[00;00m[01;30mProcessing triggers for ureadahead ...
+[00;00m[01;30mureadahead will be reprofiled on next reboot
+[00;00m[01;30mSetting up augeas-lenses (0.10.0-0ubuntu4) ...
+[00;00m[01;30mSetting up debconf-utils (1.5.42ubuntu1) ...
+[00;00m[01;30mSetting up libruby1.8 (1.8.7.352-2ubuntu1.4) ...
+[00;00m[01;30mSetting up ruby1.8 (1.8.7.352-2ubuntu1.4) ...
+[00;00m[01;30mupdate-alternatives: [00;00m[01;30musing /usr/bin/ruby1.8 to provide /usr/bin/ruby (ruby) in auto mode.[00;00m[01;30m
+[00;00m[01;30mSetting up ruby (4.8) ...
+[00;00m[01;30mSetting up virt-what (1.11-1) ...
+[00;00m[01;30mSetting up facter (2.0.2-1puppetlabs1) ...
+[00;00m[01;30mSetting up libaugeas0 (0.10.0-0ubuntu4) ...
+[00;00m[01;30mSetting up libaugeas-ruby1.8 (0.3.0-1.1ubuntu4) ...
+[00;00m[01;30mSetting up libaugeas-ruby (0.3.0-1.1ubuntu4) ...
+[00;00m[01;30mSetting up ruby-json (1.6.3-1) ...
+[00;00m[01;30mSetting up libjson-ruby (1.6.3-1) ...
+[00;00m[01;30mSetting up libruby (4.8) ...
+[00;00m[01;30mSetting up libshadow-ruby1.8 (1.4.1-8build1) ...
+[00;00m[01;30mSetting up hiera (1.3.4-1puppetlabs1) ...
+[00;00m[01;30mSetting up ruby-rgen (0.6.5-1puppetlabs1) ...
+[00;00m[01;30mSetting up puppet-common (3.6.2-1puppetlabs1) ...
+[00;00m[01;30mSetting up puppet (3.6.2-1puppetlabs1) ...
+[00;00m[01;30m * Starting puppet agent
+[00;00m[01;30m
+[00;00m[01;30mpuppet not configured to start, please edit /etc/default/puppet to enable
+[00;00m[01;30m   ...done.
+[00;00m[01;30mProcessing triggers for libc-bin ...
+[00;00m[01;30mldconfig deferred processing now taking place
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 10.99 seconds
+[00;00m[00;37m
+ubuntu-server-12042-x64 21:48:58$  mkdir -p /etc/puppet/modules  
+[00;00m[00;37m
+ubuntu-server-12042-x64 executed in 0.04 seconds
+[00;00m[00;32mspec/spec_helper_acceptance.rb passed in 128.89 seconds
+[00;00m[01;37mNo tests to run for suite 'post_suite'
+[00;00m[01;37mCleanup: cleaning up after successful run
+[00;00m[00;37mremoving temporory ssh-config files per-vagrant box
+[00;00m[01;37mDestroying vagrant boxes
+[00;00m[00;37mYou appear to be running Vagrant in a Bundler environment. Because
+[00;00m[00;37mVagrant should be run within installers (outside of Bundler), Vagrant
+[00;00m[00;37mwill assume that you're developing plugins and will change its behavior
+[00;00m[00;37min certain ways to better assist plugin development.
+[00;00m[00;37m
+[00;00m[00;37m[ubuntu-server-12042-x64] Forcing shutdown of VM...
+[00;00m[00;37m[ubuntu-server-12042-x64] Destroying VM and associated drives...
+[00;00m[00;37mYou can reproduce this run with:
+[00;00m[00;37m/usr/local/bin/beaker --log-level debug --hosts spec/acceptance/nodesets/default.yml --tests spec/spec_helper_acceptance.rb
+[00;00m
