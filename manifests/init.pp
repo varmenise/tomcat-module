@@ -11,7 +11,7 @@ class tomcat7{
   }
 
   package { 'openjdk-7-jdk':
-    ensure => installed, 
+    ensure => installed,
     require => Exec['apt-get update'],
   }
 
@@ -21,13 +21,13 @@ class tomcat7{
   }
 
   service { 'tomcat7':
-    ensure => running, 
+    ensure => running,
     require => Package['tomcat7'],
   }
 
   exec { 'sample-war':
     require => [
-      Service['tomcat7'], 
+      Service['tomcat7'],
       Package['wget']
     ],
     command => 'wget https://s3.amazonaws.com/cloudbees-bucket/SimpleServlet.war -P /tmp/',
