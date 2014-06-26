@@ -30,7 +30,7 @@ class tomcat7{
       Service['tomcat7'], 
       Package['wget']
     ],
-    command => 'wget https://s3.amazonaws.com/cloudbees-bucket/SimpleServlet.war -P /tmp/',
+    command => 'wget https://s3.amazonaws.com/cloudbees-bucket/SimpleServlet.war -P /tmp/'
     path => ['/usr/bin'],
   }
 
