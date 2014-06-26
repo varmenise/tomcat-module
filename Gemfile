@@ -8,7 +8,6 @@ group :development, :test do
   gem 'beaker',                  :require => false
   gem 'beaker-rspec',            :require => false
   gem 'rspec-rails',
-  gem 'rspec',
   gem 'specinfra', '>=0.7.0'
 end
 
