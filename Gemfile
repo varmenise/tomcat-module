@@ -6,7 +6,7 @@ group :development, :test do
   gem 'puppet-lint',             :require => false
   gem 'serverspec',              :require => false
   gem 'beaker',                  :require => false
-  gem 'rspec', '~> 3.0.0'        :require => false
+  gem 'rspec', '~> 3.0.0' ,
   gem 'specinfra', '>=0.7.0'
 end
 
